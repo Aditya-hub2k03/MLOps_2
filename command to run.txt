@@ -1,0 +1,16 @@
+Test the application:
+uvicorn app.main:app --reload
+
+curl test:
+curl http://localhost:8000/health
+curl -X POST "http://localhost:8000/predict" \
+  -F "file=@test.jpg"
+
+
+Docker commands:
+docker build -t cats-dogs-api .
+docker run -p 8000:8000 cats-dogs-api
+
+url: http://localhost:8000
+
+Endpoints: /health, /predict, /docs(for swagger)

@@ -1,0 +1,4 @@
+Version Specifics
+Python - 3.10
+Keras - 3.2.1
+Tensorflow - 2.16.1
