@@ -1,0 +1,30 @@
+M1:
+GIT + DVC COMMANDS (RUN IN TERMINAL, SEPARATE)
+
+Run in project root folder:
+
+🔹 1️⃣ Initialize Git
+git init
+
+🔹 2️⃣ Initialize DVC
+dvc init
+git add .dvc .dvcignore
+git commit -m "Initialize DVC"
+
+🔹 3️⃣ Track Dataset
+dvc add data/PetImages
+git add 'data\.gitignore' 'data\PetImages.dvc'
+git commit -m "Track PetImages dataset with DVC"
+
+🔹 4️⃣ Add Remote Storage
+mkdir dvc_storage
+dvc remote add -d localstorage ./dvc_storage
+git add .dvc/config
+git commit -m "Add DVC remote storage"
+
+🔹 5️⃣ Push Dataset
+dvc push
+
+🔹 6️⃣ Commit Notebook & Artifacts
+git add .
+git commit -m "Complete M1: MLflow training and logging"
