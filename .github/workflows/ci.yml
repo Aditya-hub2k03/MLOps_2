@@ -1,4 +1,4 @@
-name: M3 CI Pipeline
+name: M3 CI Pipeline 
 
 on:
   push:
